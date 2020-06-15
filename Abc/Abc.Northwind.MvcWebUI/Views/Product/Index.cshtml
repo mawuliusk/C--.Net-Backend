@@ -1,0 +1,24 @@
+﻿@model Abc.Northwind.MvcWebUI.Models.ProductListViewModel
+
+@{
+    Layout = null;
+    var count = 0;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div> 
+        @foreach(var product in Model.Products)
+        {
+            @(++count + ") " + product.ProductName)
+            <br />
+        }
+    </div>
+</body>
+</html>
